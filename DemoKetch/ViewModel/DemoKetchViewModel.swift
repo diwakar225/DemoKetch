@@ -16,6 +16,8 @@ final class DemoKetchViewModel: ObservableObject {
     @Published var sorting: [SortOption] = []
     @Published var selectedSort: String = "Newness"
     @Published var totalItemCount: Int = 0
+    @Published  var isSortSheetPresented = false
+    @Published  var showFilters = false
 
     private var currentPage = 1
     private var totalCount = 0

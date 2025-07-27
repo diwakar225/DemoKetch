@@ -8,8 +8,6 @@ import SwiftUI
 
 struct ProductListView: View {
     @StateObject var viewModel = DemoKetchViewModel()
-    @State private var isSortSheetPresented = false
-    @State private var showFilters = false
 
     let columns = [
         GridItem(.flexible()),
@@ -36,8 +34,8 @@ struct ProductListView: View {
                 Divider()
 
                 BottomBar(
-                    isSortSheetPresented: $isSortSheetPresented,
-                    showFilters: $showFilters,
+                    isSortSheetPresented: $viewModel.isSortSheetPresented,
+                    showFilters: $viewModel.showFilters,
                     viewModel: viewModel
                 )
             }
